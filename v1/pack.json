@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packInfo": {
-    "version": 4,
+    "version": 5,
     "date": "2026-11-01"
   },
   "rules": [
@@ -496,6 +496,29 @@
       "yapikredi.com.tr",
       "yurticikargo.com",
       "ziraatbank.com.tr"
+    ],
+    "suspiciousLinkRules": [
+      {
+        "id": "spam.shortener",
+        "target": "linkDomain",
+        "matchType": "regex",
+        "textForm": "raw",
+        "pattern": "(?i)(?:^|\\.)(?:bit\\.ly|cutt\\.ly|goo\\.gl|is\\.gd|ow\\.ly|rb\\.gy|rebrand\\.ly|shorturl\\.at|t\\.co|t\\.ly|tiny\\.cc|tinyurl\\.com)$",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      }
+    ],
+    "legalNoticeRules": [
+      {
+        "id": "legal.commercial-notice",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "mersis|\\bmrs\\b|istemiyorsan|izniptal|\\bret\\b|iptal\\s*(?:icin|etmek)",
+        "action": "allow",
+        "source": "pack"
+      }
     ]
   },
   "guardSignals": {
@@ -604,7 +627,8 @@
       "saglikbknlg",
       "tcsaglikbak",
       "icisleribak",
-      "i.b.b."
+      "i.b.b.",
+      "tuvturk"
     ]
   }
 }
