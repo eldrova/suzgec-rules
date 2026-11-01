@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packInfo": {
-    "version": 3,
+    "version": 4,
     "date": "2026-11-01"
   },
   "rules": [
@@ -560,6 +560,51 @@
         "source": "pack",
         "subAction": "transactionalHealth"
       }
+    ],
+    "protectedSenders": [
+      "denizbank",
+      "is bankasi",
+      "enpara",
+      "enpara.com",
+      "*enpara",
+      "*enpara*",
+      ".enpara",
+      "garantibbva",
+      "teb",
+      "getirfinans",
+      "moneypay",
+      "papara",
+      "paycell",
+      "iyzico",
+      "paytr odeme",
+      "aras kargo",
+      "yurtici krg",
+      "surat kargo",
+      "ptt",
+      "kolaygelsin",
+      "hepsijet",
+      "ty express",
+      "dhl ecom",
+      "agt kurye",
+      "kargomsende",
+      "banabikurye",
+      "fiyuu",
+      "turkcell",
+      "turktelekom",
+      "superonline",
+      "turknet",
+      "mobilfatura",
+      "faturabilgi",
+      "yasaluyari",
+      "btk",
+      "afad",
+      "e-nabiz",
+      "e-devlet",
+      "e devlet",
+      "saglikbknlg",
+      "tcsaglikbak",
+      "icisleribak",
+      "i.b.b."
     ]
   }
 }
