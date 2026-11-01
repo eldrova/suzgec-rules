@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packInfo": {
-    "version": 2,
+    "version": 3,
     "date": "2026-11-01"
   },
   "rules": [
@@ -194,6 +194,56 @@
       "action": "junk",
       "source": "pack",
       "category": "gambling"
+    },
+    {
+      "id": "gambling.brand-names",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "casibom|pusulabet|poliwin|\\w*betting\\b",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.fs-offer",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "\\bfs\\s*(?:hediye|festival)|yatirima\\s*fs|fs\\s*ve\\s*cark",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.free-balance",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "bedava\\s*(?:yatirim|\\S{0,10}\\s*tl\\s*bakiye)",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.play-to-win",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "(?:hediye|deneme)\\s*ile\\s*oyna|siralamada\\s*yerini\\s*al",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "adult.escort",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "\\brus\\s*cicek|outcall",
+      "action": "junk",
+      "source": "pack",
+      "category": "adult"
     }
   ],
   "remainingRules": [
@@ -374,6 +424,56 @@
         "matchType": "regex",
         "textForm": "folded",
         "pattern": "account\\s+(?:is|was|has been)\\s+(?:locked|suspended|blocked)",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      },
+      {
+        "id": "gambling.weak.cash",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "nak.?t\\s*(?:hediye|deneme|kazan|odul)",
+        "action": "junk",
+        "source": "pack",
+        "category": "gambling"
+      },
+      {
+        "id": "gambling.weak.no-terms",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "sart\\s*(?:kosul\\s*)?yok|sartsiz\\s*cek|kural\\s*yok",
+        "action": "junk",
+        "source": "pack",
+        "category": "gambling"
+      },
+      {
+        "id": "gambling.weak.min-deposit",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "\\bmin(?:imum)?\\W{0,3}.{0,12}havale",
+        "action": "junk",
+        "source": "pack",
+        "category": "gambling"
+      },
+      {
+        "id": "gambling.weak.credited",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "hesabiniza\\s*eklendi|hediye\\w*\\s*eklendi",
+        "action": "junk",
+        "source": "pack",
+        "category": "gambling"
+      },
+      {
+        "id": "phishing.weak.telegram",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "telegram\\s*adres",
         "action": "junk",
         "source": "pack",
         "category": "phishing"
