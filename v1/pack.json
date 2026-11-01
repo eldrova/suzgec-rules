@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 1,
+  "packInfo": {
+    "version": 2,
+    "date": "2026-11-01"
+  },
+  "rules": [
+    {
+      "id": "gambling.deneme-bonusu",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "deneme\\s*bonus",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.bonus-kodu",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "bonus\\s*kodu",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.freespin",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "free\\s*spin",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.bedava-bahis",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "bedava\\s*bahis",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.yatirimsiz-bonus",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "yatirimsiz\\s*bonus",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.cevrim-sartsiz",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "cevrim\\s*sartsiz",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.kayip-bonusu",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "kayip\\s*bonus",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.hos-geldin-bonusu",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "hos\\s*geldin\\s*bonus",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.guncel-giris",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "guncel\\s*giris",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.casino",
+      "target": "body",
+      "matchType": "contains",
+      "textForm": "folded",
+      "pattern": "casino",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.kacak-bahis",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "kacak\\s*bahis",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.domain-tld",
+      "target": "linkDomain",
+      "matchType": "regex",
+      "textForm": "raw",
+      "pattern": "\\.(bet|casino|poker)$",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.domain-bahis",
+      "target": "linkDomain",
+      "matchType": "contains",
+      "textForm": "raw",
+      "pattern": "bahis",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.brand-bet",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "raw",
+      "pattern": "(?i)\\b(?!(?:sohbet|muhabbet|mahabbet|rekabet|isabet|hitabet|musibet|nobet|akibet|gurbet|ukubet|alfabet|tibet|elizabet|kitabet|cenabet|mesabet)\\b)[a-z0-9]{2,}bet\\b",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.tekel-bet",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "tekel\\s*bet",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.cevrimsiz",
+      "target": "body",
+      "matchType": "contains",
+      "textForm": "folded",
+      "pattern": "cevrimsiz",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.yatirim-sartsiz",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "yatirim\\s*sarti?siz",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.free-variants",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "free\\s*(?:bett?\\b|sp[il]n|psin)",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    },
+    {
+      "id": "gambling.deneme-fs",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "deneme\\s*fs\\b",
+      "action": "junk",
+      "source": "pack",
+      "category": "gambling"
+    }
+  ],
+  "remainingRules": [
+    {
+      "id": "loans.offer",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "(?:ihtiyac|konut|tasit|faizsiz|aninda)\\s*kredi|kredi\\s*notu|borc\\s*(?:kapatma|yapilandir)|instant loan|payday loan|personal loan",
+      "action": "junk",
+      "source": "pack",
+      "category": "loans"
+    },
+    {
+      "id": "political.campaign",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "oyunuzu|\\boy\\s*ver|secim\\s*(?:kampanya|bildirge)|(?:milletvekili|baskan)\\s*aday|vote for",
+      "action": "junk",
+      "source": "pack",
+      "category": "political"
+    },
+    {
+      "id": "adult.content",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "escort\\s*bayan|eskort|sohbet\\s*hatti|yetiskin\\s*icerik|\\+\\s*18\\b|adult content",
+      "action": "junk",
+      "source": "pack",
+      "category": "adult"
+    },
+    {
+      "id": "promotion.coupon",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "(?:indirim|kupon)\\s*kodu|coupon code|promo code",
+      "action": "promotion",
+      "subAction": "promotionalCoupons",
+      "source": "pack",
+      "category": "promotions"
+    },
+    {
+      "id": "promotion.offer",
+      "target": "body",
+      "matchType": "regex",
+      "textForm": "folded",
+      "pattern": "\\bkampanya|\\bindirim|\\bfirsat|\\bdiscount|\\bsale\\b|%\\s*[0-9]+|[0-9]+\\s*%",
+      "action": "promotion",
+      "subAction": "promotionalOffers",
+      "source": "pack",
+      "category": "promotions"
+    }
+  ],
+  "linkLists": {
+    "shorteners": [
+      "bit.ly",
+      "cutt.ly",
+      "goo.gl",
+      "is.gd",
+      "ow.ly",
+      "rb.gy",
+      "rebrand.ly",
+      "shorturl.at",
+      "t.co",
+      "t.ly",
+      "tiny.cc",
+      "tinyurl.com"
+    ],
+    "highRiskTLDs": [
+      "bond",
+      "buzz",
+      "cf",
+      "cfd",
+      "click",
+      "cyou",
+      "ga",
+      "gq",
+      "icu",
+      "lol",
+      "monster",
+      "pw",
+      "quest",
+      "rest",
+      "sbs",
+      "tk",
+      "top",
+      "xyz"
+    ]
+  },
+  "weakSignals": {
+    "rules": [
+      {
+        "id": "gambling.weak.bonus",
+        "target": "body",
+        "matchType": "contains",
+        "textForm": "folded",
+        "pattern": "bonus",
+        "action": "junk",
+        "source": "pack",
+        "category": "gambling"
+      },
+      {
+        "id": "gambling.weak.slot",
+        "target": "body",
+        "matchType": "contains",
+        "textForm": "folded",
+        "pattern": "slot",
+        "action": "junk",
+        "source": "pack",
+        "category": "gambling"
+      },
+      {
+        "id": "gambling.weak.bahis",
+        "target": "body",
+        "matchType": "contains",
+        "textForm": "folded",
+        "pattern": "bahis",
+        "action": "junk",
+        "source": "pack",
+        "category": "gambling"
+      },
+      {
+        "id": "phishing.weak.delivery-failed",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "teslim edilemedi",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      },
+      {
+        "id": "phishing.weak.address-update",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "adres\\w*\\s+guncelle",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      },
+      {
+        "id": "phishing.weak.account-locked",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "hesabiniz\\s+(?:bloke|kilit|askiya)",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      },
+      {
+        "id": "phishing.weak.refund",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "iade\\s+hakk",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      },
+      {
+        "id": "phishing.weak.delivery-failed-en",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "could not be delivered|delivery failed|update your address",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      },
+      {
+        "id": "phishing.weak.account-locked-en",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "account\\s+(?:is|was|has been)\\s+(?:locked|suspended|blocked)",
+        "action": "junk",
+        "source": "pack",
+        "category": "phishing"
+      }
+    ],
+    "recognizedSenders": [],
+    "recognizedDomains": [
+      "akbank.com",
+      "araskargo.com.tr",
+      "bonus.com.tr",
+      "denizbank.com",
+      "garantibbva.com.tr",
+      "gov.tr",
+      "halkbank.com.tr",
+      "isbank.com.tr",
+      "mngkargo.com.tr",
+      "qnb.com.tr",
+      "suratkargo.com.tr",
+      "vakifbank.com.tr",
+      "yapikredi.com.tr",
+      "yurticikargo.com",
+      "ziraatbank.com.tr"
+    ]
+  },
+  "guardSignals": {
+    "verificationRules": [
+      {
+        "id": "guard.verification.tr",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "(?:dogrulama|tek kullanimlik|onay kod|guvenlik kod|giris kod|giris sifre|\\bkodunuz\\b|\\bkodu\\b|\\bsifreniz\\b|\\bsifre\\b|\\botp\\b)[^0-9]{0,40}\\b[0-9]{4,8}\\b|\\b[0-9]{4,8}\\b[^0-9]{0,40}(?:dogrulama|tek kullanimlik|onay kod|guvenlik kod|giris kod|giris sifre|\\bkodunuz\\b|\\bkodu\\b|\\bsifreniz\\b|\\bsifre\\b|\\botp\\b)",
+        "action": "allow",
+        "source": "pack"
+      },
+      {
+        "id": "guard.verification.en",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "(?:verification code|security code|one[- ]time|passcode|\\bcode\\b)[^0-9]{0,40}\\b[0-9]{4,8}\\b|\\b[0-9]{4,8}\\b[^0-9]{0,40}(?:verification code|security code|one[- ]time|passcode|\\bcode\\b)",
+        "action": "allow",
+        "source": "pack"
+      }
+    ],
+    "transactionalRules": [
+      {
+        "id": "guard.transaction.bank",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "harcama yapil|hesabiniza|hesabinizdan|ekstre|son odeme tarihi|kredi karti|\\beft\\b|\\bhavale\\b",
+        "action": "transaction",
+        "source": "pack",
+        "subAction": "transactionalFinance"
+      },
+      {
+        "id": "guard.transaction.cargo",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "kargonuz|gonderiniz|takip no|teslim edildi|dagitima cikti",
+        "action": "transaction",
+        "source": "pack",
+        "subAction": "transactionalOrders"
+      },
+      {
+        "id": "guard.transaction.public",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "e-?devlet|turkiye\\.gov|nufus mudur",
+        "action": "transaction",
+        "source": "pack",
+        "subAction": "transactionalPublicServices"
+      },
+      {
+        "id": "guard.transaction.health",
+        "target": "body",
+        "matchType": "regex",
+        "textForm": "folded",
+        "pattern": "randevunuz|\\bmhrs\\b|muayene|hastane",
+        "action": "transaction",
+        "source": "pack",
+        "subAction": "transactionalHealth"
+      }
+    ]
+  }
+}
